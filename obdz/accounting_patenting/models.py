@@ -23,9 +23,13 @@ class CopyrightObject(models.Model):
     description = models.TextField(null=True, blank=True)
 
     def __str__(self) -> str:
-        return f"Об'єкт: {self.name}"
+        return f"Oб'єкт: {self.name}"
 
 
 class MainPatent(models.Model):
-    owner = models.ForeignKey(to=Owner, on_delete=models.CASCADE)
-    description = models.TextField(null=True, blank=True)
+    owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
+    document = models.ForeignKey(Document, on_delete=models.CASCADE)
+    object = models.ForeignKey(CopyrightObject, on_delete=models.CASCADE)
+
+    def __str__(self) -> str:
+        return f"{self.owner} | {self.object} | {self.document}"
