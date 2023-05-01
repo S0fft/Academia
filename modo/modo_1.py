@@ -41,8 +41,8 @@ while b - a >= epsilon:
         fx2 = m * (pow(x2, 2)) + n * x2 + c
         print(f"K: {count_i}), a: {a},  b: {b}, a-b: {a - b}, x1: {x1}, x2: {x2}, fx1: {fx1}, fx2: {fx2}")
 
-        last_value_a = a
-        last_value_b = b
+    last_value_a = a
+    last_value_b = b
 
 x = (a + b) / 2
 fx = m * (pow(x, 2)) + n * x + c
