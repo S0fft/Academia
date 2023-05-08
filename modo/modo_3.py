@@ -30,4 +30,4 @@ def newton_raphson(x0, m, n, tol):
 
 
 x_min = newton_raphson(X0, m, n, tol)
-print("Минимум функции:", x_min)
+print("Minimum coordinates:", x_min)
