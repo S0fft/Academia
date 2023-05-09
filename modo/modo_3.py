@@ -1,7 +1,7 @@
 m = 7
 n = 39
-X0 = 49
-tol = 0.004
+xo = 49
+epsilon = 0.004
 
 
 def f(x, m, n):
@@ -16,8 +16,8 @@ def f_second_deriv(x, m, n):
     return 2 * n + 2 * m / x ** 3
 
 
-def newton_raphson(x0, m, n, tol):
-    x = x0
+def newton_raphson(xo, m, n, tol):
+    x = xo
     while True:
         fx = f(x, m, n)
         fprime_x = f_deriv(x, m, n)
@@ -29,5 +29,5 @@ def newton_raphson(x0, m, n, tol):
     return x
 
 
-x_min = newton_raphson(X0, m, n, tol)
-print("Minimum coordinates: {:.4f}".format(x_min))
+x_min = newton_raphson(xo, m, n, epsilon)
+print("Minimum coordinate: {:.4f}".format(x_min))
