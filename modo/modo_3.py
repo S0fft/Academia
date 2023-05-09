@@ -30,4 +30,4 @@ def newton_raphson(x0, m, n, tol):
 
 
 x_min = newton_raphson(X0, m, n, tol)
-print("Minimum coordinates:", x_min)
+print("Minimum coordinates: {:.4f}".format(x_min))
