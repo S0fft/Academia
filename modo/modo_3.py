@@ -16,7 +16,7 @@ def f_second_deriv(x, m, n):
     return 2 * n + 2 * m / x ** 3
 
 
-def newton_raphson(xo, m, n, tol):
+def newton_raphson(xo, m, n, eps):
     x = xo
     while True:
         fx = f(x, m, n)
@@ -24,10 +24,12 @@ def newton_raphson(xo, m, n, tol):
         fprimeprime_x = f_second_deriv(x, m, n)
         delta_x = -fprime_x / fprimeprime_x
         x += delta_x
-        if abs(delta_x) < tol:
+        if abs(delta_x) < eps:
             break
     return x
 
 
 x_min = newton_raphson(xo, m, n, epsilon)
-print("Minimum coordinate: {:.4f}".format(x_min))
+y_min = f(x_min, m, n)
+print("Minimum coordinate X: {:.4f}".format(x_min))
+print("Minimum coordinate Y: {:.4f}".format(y_min))
