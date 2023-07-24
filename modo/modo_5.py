@@ -36,5 +36,5 @@ def gradient_descent_var_step(x0, y0, z0, gamma0, gamma_min, max_iter):
     return x
 
 
-x_min = gradient_descent_var_step(x0, y0, 0, gamma0, gamma_min, max_iter=1000)
+x_min = gradient_descent_var_step(x0, y0, 0, gamma0, gamma_min, max_iter=10)
 print("Координати мінімуму функції:", x_min)

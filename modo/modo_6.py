@@ -1,7 +1,6 @@
 import numpy as np
 from scipy.optimize import minimize
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 a = 6
 b = 27
