@@ -30,7 +30,7 @@ def iterative_method(x0, epsilon):
         x0 = x1
         iteration += 1
 
-    raise Exception('Не удалось найти корень в указанном пределе итераций')
+    raise Exception('Не вдалося знайти коріння у вказаній межі ітерацій')
 
 
 root_combined = combined_method(x0_combined, x1_combined, epsilon)
@@ -41,19 +41,19 @@ except Exception as e:
     root_iterative = None
 
 # Результаты
-print('Корень с использованием комбинированного метода:', root_combined)
+print('Корінь з використанням комбінованого методу:', root_combined)
 
 if root_iterative is not None:
-    print('Корень с использованием метода итераций:', root_iterative)
+    print('Корінь із використанням методу ітерацій:', root_iterative)
 else:
-    print('Метод итераций не сошелся к корню')
+    print('Метод ітерацій не зійшовся до кореня')
 
 
 if abs(func(root_combined)) < epsilon and (root_iterative is None or abs(func(root_iterative)) < epsilon):
-    print('\n' 'Сравнение результатов:' '\n' 'Оба метода сошлись к корню')
-    print('Значение корня (комбинированный метод):', root_combined)
+    print('\n' 'Порівняння результатів:' '\n' 'Обидва методи зійшлися до кореня')
+    print('Значення кореня (комбінований метод):', root_combined)
 
     if root_iterative is not None:
-        print('Значение корня (метод итераций):', root_iterative)
+        print('Значення кореня (метод ітерацій):', root_iterative)
 else:
-    print('Не удалось достичь заданной точности в обоих методах')
+    print('Не вдалося досягти заданої точності в обох методах')
