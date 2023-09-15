@@ -32,4 +32,4 @@ def one_dimensional_scaling(matrix, parameters_to_rank):
 importance_scores = one_dimensional_scaling(matrix, parameters_to_rank)
 
 for param, importance in zip(parameters_to_rank, importance_scores):
-    print(f"Параметр {param + 1}: Относительная важность = {importance:.2f}")
+    print(f"Параметр {param + 1}: Відносна важливість = {importance:.2f}")
