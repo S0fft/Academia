@@ -1,18 +1,28 @@
 import numpy as np
 
+# Замените этот пример на вашу матрицу оценок экспертов
 matrix = np.array([
-    [1, 2, 3, 4, 5],
-    [6, 7, 8, 9, 10],
-    [11, 12, 13, 14, 15],
-    [16, 17, 18, 19, 20],
-    [21, 22, 23, 24, 25]
+    [5, 4, 3, 2, 1],
+    [4, 3, 2, 1, 5],
+    [3, 2, 1, 5, 4],
+    [2, 1, 5, 4, 3],
+    [1, 5, 4, 3, 2],
 ])
 
 parameters_to_rank = [0, 1, 2, 3, 4]
 
-
 def one_dimensional_scaling(matrix, parameters_to_rank):
     num_experts, num_parameters = matrix.shape
+
+    # Создаем матрицу Z и матрицу P
+    Z = np.zeros((num_parameters, num_parameters))
+    P = np.zeros((num_parameters, num_parameters))
+
+    for i in range(num_parameters):
+        for j in range(num_parameters):
+            if i != j:
+                Z[i, j] = np.sum(matrix[:, i] > matrix[:, j])
+                P[i, j] = np.sum(matrix[:, i] < matrix[:, j])
 
     parameter_importance = []
 
@@ -21,13 +31,13 @@ def one_dimensional_scaling(matrix, parameters_to_rank):
 
         for i in range(num_parameters):
             for j in range(num_parameters):
-                sum_ratios += matrix[param, i] / matrix[param, j]
+                if i != j:
+                    sum_ratios += (Z[i, j] - Z[j, i]) / (Z[i, j] + P[i, j])
 
-        importance = sum_ratios / (num_parameters * (num_parameters - 1))
+        importance = sum_ratios / (num_parameters - 1)
         parameter_importance.append(importance)
 
     return parameter_importance
-
 
 importance_scores = one_dimensional_scaling(matrix, parameters_to_rank)
 
