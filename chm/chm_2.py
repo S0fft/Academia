@@ -20,4 +20,4 @@ B = [
 c = [4.5, -3.2, 5.6]
 
 solution = simple_iteration_solver(B, c, accuracy=0.001)
-print("Решение:", solution)
+print("Рішення:", solution)
