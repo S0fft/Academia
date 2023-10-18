@@ -1,24 +1,37 @@
-def simple_iteration_solver(B, c, omega=1.0, accuracy=0.001, max_iterations=500):
-    n = len(c)
-    x = [0.0] * n
-    for i in range(max_iterations):
-        x_new = [0.0] * n
-        for j in range(n):
-            sum_ = sum(B[j][k] * x[k] for k in range(n) if k != j)
-            x_new[j] = omega * ((c[j] - sum_) / B[j][j]) + (1 - omega) * x[j]
-        if all(abs(x_new[j] - x[j]) < accuracy for j in range(n)):
-            return x_new
-        x = x_new
+def sol(A, b):
+    n = len(A)
+
+    for i in range(n):
+        max_row = max(range(i, n), key=lambda i: abs(A[i][i]))
+        A[i], A[max_row] = A[max_row], A[i]
+        b[i], b[max_row] = b[max_row], b[i]
+
+        elem = A[i][i]
+        for col in range(i, n):
+            A[i][col] /= elem
+        b[i] /= elem
+        for row in range(n):
+            if row != i:
+                factor = A[row][i]
+                for col in range(i, n):
+                    A[row][col] -= factor * A[i][col]
+                b[row] -= factor * b[i]
+
+    x = [0] * n
+    for i in range(n - 1, -1, -1):
+        x[i] = b[i]
+        for j in range(i + 1, n):
+            x[i] -= A[i][j] * x[j]
+
     return x
 
 
-B = [
-    [3.5, -2.3, 3.7],
-    [-2.8, 3.4, 5.8],
-    [-1.2, -7.3, 2.3]
-]
-c = [4.5, -3.2, 5.6]
+A = [[3.5, 2.3, -3.7],
+     [2.8, 3.4, 5.8],
+     [1.2, 7.3, -2.3]]
 
-w = 0.1
-solution = simple_iteration_solver(B, c, omega=w, accuracy=0.001)
-print("Решение:", solution)
+b = [4.5, -3.2, 5.6]
+
+x = sol(A, b)
+
+print("Відповідь:", x)
