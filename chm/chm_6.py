@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 
-
 x0 = 1
 y0 = 1
 a = 2
