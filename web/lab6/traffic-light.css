@@ -1,0 +1,31 @@
+/* styles.css */
+body {
+    margin: 0;
+}
+
+.light {
+    height: 100vh;
+    display: inline-block;
+    width: 30%;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+/* Делаем первый блок невидимым и второй блок невидимым, но занимающим место */
+.light:nth-child(1) {
+    display: none;
+}
+
+.light:nth-child(2) {
+    visibility: hidden;
+}

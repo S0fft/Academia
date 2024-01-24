@@ -1,0 +1,35 @@
+/* styles.css */
+body {
+    margin: 0;
+}
+
+/* Блок с рамкой */
+.block-with-border {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed blue;
+    /* Пример рамки с разным типом линии */
+    border-top: 5px solid red;
+    border-bottom: 5px solid green;
+    border-left: 10px dotted orange;
+    border-right: 10px double purple;
+    margin-bottom: 20px;
+}
+
+/* Блок с фоновым изображением */
+.block-with-background-image {
+    width: 200px;
+    height: 200px;
+    background-image: url('your-image.jpg');
+    /* Укажите путь к изображению */
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+/* Блок с фоновым цветом */
+.block-with-background-color {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    margin-bottom: 20px;
+}
