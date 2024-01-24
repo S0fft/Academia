@@ -1,0 +1,75 @@
+/* Задание 3 */
+table,
+td,
+th {
+    border: 1px solid red;
+}
+
+/* Задание 4 */
+* {
+    border-collapse: collapse;
+}
+
+/* Задание 5 */
+.frmtbl {
+    /* Стиль для таблицы в целом */
+}
+
+.frmtbl thead {
+    /* Стиль для заголовка таблицы */
+}
+
+.frmtbl tbody {
+    /* Стиль для основной части таблицы */
+}
+
+.frmtbl tfoot {
+    /* Стиль для нижней части таблицы */
+}
+
+/* Задание 6 */
+.marked-list {
+    list-style-type: square;
+    list-style-position: inside;
+    list-style-image: url('marker.png');
+    margin-left: 50px;
+}
+
+/* Задание 8 */
+#layer {
+    background-color: yellow;
+    border: 2px solid green;
+    padding: 20px;
+    padding-left: 50px;
+    color: blue;
+    width: 200px;
+    position: absolute;
+    clip: rect(40px, auto, auto, 40px);
+}
+
+/* Задание 9 */
+.image-container {
+    border: 1px solid;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+/* Задание 10 */
+.scrollbar-styling {
+    width: 200px;
+    height: 100px;
+    overflow: auto;
+}
+
+/* Задание 10 (IE Styling) */
+html,
+body {
+    scrollbar-3dlight-color: red;
+    scrollbar-arrow-color: yellow;
+    scrollbar-highlight-color: aqua;
+    scrollbar-face-color: green;
+    scrollbar-shadow-color: fuchsia;
+    scrollbar-darkshadow-color: blue;
+    scrollbar-track-color: maroon;
+}
