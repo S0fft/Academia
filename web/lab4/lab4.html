@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid #000;
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Завдання 2-12 -->
+    <form action="anketa.htm" method="post">
+        <table>
+            <tr>
+                <th colspan="2">Анкета</th>
+            </tr>
+            <tr>
+                <td>Ім'я користувача:</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Пароль користувача:</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>Дата народження:</td>
+                <td>
+                    <select name="day">
+                        <!-- Додайте дні місяця у списку -->
+                    </select>
+                    <select name="month">
+                        <!-- Додайте місяці до списку -->
+                    </select>
+                    <input type="text" name="year" maxlength="4">
+                </td>
+            </tr>
+            <tr>
+                <td>Пол:</td>
+                <td>
+                    <label><input type="radio" name="gender" value="male">Чоловічий</label>
+                    <label><input type="radio" name="gender" value="female"> Жіночий</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Отримувати спам:</td>
+                <td><label><input type="checkbox" name="spam" checked> Так, я бажаю отримувати спам</label></td>
+            </tr>
+            <tr>
+                <td>Кількість листів на день:</td>
+                <td>
+                    <label><input type="radio" name="emails" value="1">1</label>
+                    <label><input type="radio" name="emails" value="2">2</label>
+                    <label><input type="radio" name="emails" value="3"> 3</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Інтереси:</td>
+                <td>
+                    <select name="interests[]" multiple>
+                        Інтерес 1
+                        Інтерес 2
+                        Інтерес 3
+                        Інтерес 4
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Додаткова інформація:</td>
+                <td><textarea name="additional_info" rows="7" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td>Завантажити файл:</td>
+                <td><input type="file" name="file"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Надіслати">
+                    <input type="reset" value="Очистити">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
