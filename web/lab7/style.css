@@ -1,33 +1,33 @@
-/* Задание 3 */
+/* Завдання 3 */
 table,
 td,
 th {
     border: 1px solid red;
 }
 
-/* Задание 4 */
+/* Завдання 4 */
 * {
     border-collapse: collapse;
 }
 
-/* Задание 5 */
+/* Завдання 5 */
 .frmtbl {
-    /* Стиль для таблицы в целом */
+    /* Стиль для таблиці загалом */
 }
 
 .frmtbl thead {
-    /* Стиль для заголовка таблицы */
+    /* Стиль для заголовка таблиці */
 }
 
 .frmtbl tbody {
-    /* Стиль для основной части таблицы */
+    /* Стиль для основної частини таблиці */
 }
 
 .frmtbl tfoot {
-    /* Стиль для нижней части таблицы */
+    /* Стиль для нижньої частини таблиці */
 }
 
-/* Задание 6 */
+/* Завдання 6 */
 .marked-list {
     list-style-type: square;
     list-style-position: inside;
@@ -35,7 +35,7 @@ th {
     margin-left: 50px;
 }
 
-/* Задание 8 */
+/* Завдання 8 */
 #layer {
     background-color: yellow;
     border: 2px solid green;
@@ -47,7 +47,7 @@ th {
     clip: rect(40px, auto, auto, 40px);
 }
 
-/* Задание 9 */
+/* Завдання 9 */
 .image-container {
     border: 1px solid;
     width: 200px;
@@ -55,14 +55,14 @@ th {
     overflow: hidden;
 }
 
-/* Задание 10 */
+/* Завдання 10 */
 .scrollbar-styling {
     width: 200px;
     height: 100px;
     overflow: auto;
 }
 
-/* Задание 10 (IE Styling) */
+/* Завдання 10 (IE Styling) */
 html,
 body {
     scrollbar-3dlight-color: red;

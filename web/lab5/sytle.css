@@ -1,16 +1,12 @@
 /* styles.css */
 body {
     color: #333;
-    /* Цвет текста */
     font-size: 16px;
-    /* Размер шрифта */
     font-family: 'Arial', sans-serif;
-    /* Название шрифта */
 }
 
 p {
     letter-spacing: 2px;
-    /* Разреженный интервал текста между буквами */
 }
 
 .italic-underline {
@@ -35,7 +31,6 @@ p {
 
 .perenos {
     white-space: nowrap;
-    /* Запрет переноса слов в пределах абзаца */
 }
 
 .red-uppercase {

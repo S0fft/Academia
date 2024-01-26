@@ -5,12 +5,9 @@ body {
 
 .transparent-image {
     opacity: 1;
-    /* Исходная прозрачность */
     transition: opacity 0.5s;
-    /* Плавное изменение прозрачности в течение 0.5 секунды */
 }
 
 .transparent-image:hover {
     opacity: 0.5;
-    /* Прозрачность при наведении */
 }

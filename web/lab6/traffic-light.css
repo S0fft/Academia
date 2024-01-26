@@ -1,4 +1,3 @@
-/* styles.css */
 body {
     margin: 0;
 }
@@ -21,7 +20,6 @@ body {
     background-color: green;
 }
 
-/* Делаем первый блок невидимым и второй блок невидимым, но занимающим место */
 .light:nth-child(1) {
     display: none;
 }
