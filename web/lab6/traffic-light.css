@@ -10,14 +10,23 @@ body {
 
 .red {
     background-color: red;
+    height: 100vh;
+    display: inline-block;
+    width: 30%;
 }
 
 .yellow {
     background-color: yellow;
+    height: 100vh;
+    display: inline-block;
+    width: 30%;
 }
 
 .green {
     background-color: green;
+    height: 100vh;
+    display: inline-block;
+    width: 30%;
 }
 
 .light:nth-child(1) {
