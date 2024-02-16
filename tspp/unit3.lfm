@@ -1,0 +1,78 @@
+object Form3: TForm3
+  Left = 272
+  Height = 438
+  Top = 303
+  Width = 585
+  Caption = 'Evgeniy_Pleikh'
+  ClientHeight = 438
+  ClientWidth = 585
+  Color = clGradientActiveCaption
+  DesignTimePPI = 144
+  OnPaint = coImTriangleClick
+  LCLVersion = '3.0.0.3'
+  object coImTriangle: TImage
+    Left = 24
+    Height = 182
+    Top = 32
+    Width = 341
+    OnClick = coImTriangleClick
+    OnPaint = coImTriangleClick
+  end
+  object tbX: TTrackBar
+    Left = 40
+    Height = 48
+    Top = 264
+    Width = 220
+    Max = 200
+    OnChange = tbXChange
+    Position = 0
+    TabOrder = 0
+  end
+  object tbY: TTrackBar
+    Left = 32
+    Height = 48
+    Top = 360
+    Width = 220
+    Max = 200
+    OnChange = tbYChange
+    Position = 0
+    TabOrder = 1
+  end
+  object tbSize: TTrackBar
+    Left = 320
+    Height = 24
+    Top = 376
+    Width = 172
+    Max = 150
+    Min = 50
+    OnChange = tbSizeChange
+    Position = 50
+    Color = clHighlight
+    ParentColor = False
+    TabOrder = 2
+  end
+  object Edit1: TEdit
+    Left = 412
+    Height = 33
+    Top = 44
+    Width = 99
+    TabOrder = 3
+    Text = 'Edit1'
+  end
+  object Edit2: TEdit
+    Left = 444
+    Height = 33
+    Top = 84
+    Width = 99
+    TabOrder = 4
+    Text = 'Edit2'
+  end
+  object Edit3: TEdit
+    Left = 304
+    Height = 33
+    Top = 280
+    Width = 172
+    TabOrder = 5
+    Text = 'Edit3'
+  end
+end
