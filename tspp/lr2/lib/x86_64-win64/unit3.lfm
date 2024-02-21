@@ -1,0 +1,179 @@
+object Form3: TForm3
+  Left = 786
+  Height = 656
+  Top = 198
+  Width = 893
+  Caption = '2-Evgeniy_Pelikh-IST-21-1'
+  ClientHeight = 0
+  ClientWidth = 0
+  Color = clGreen
+  DesignTimePPI = 144
+  LCLVersion = '3.0.0.3'
+  object Edit1: TEdit
+    Left = 522
+    Height = 33
+    Top = 72
+    Width = 120
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 746
+    Height = 33
+    Top = 72
+    Width = 120
+    TabOrder = 1
+  end
+  object Edit3: TEdit
+    Left = 522
+    Height = 33
+    Top = 125
+    Width = 120
+    TabOrder = 2
+  end
+  object Edit4: TEdit
+    Left = 746
+    Height = 33
+    Top = 125
+    Width = 120
+    TabOrder = 3
+  end
+  object Edit5: TEdit
+    Left = 522
+    Height = 33
+    Top = 181
+    Width = 120
+    TabOrder = 4
+  end
+  object Edit6: TEdit
+    Left = 746
+    Height = 33
+    Top = 189
+    Width = 120
+    TabOrder = 5
+  end
+  object Label1: TLabel
+    Left = 484
+    Height = 25
+    Top = 72
+    Width = 33
+    Caption = 'X1='
+  end
+  object Label2: TLabel
+    Left = 708
+    Height = 25
+    Top = 72
+    Width = 32
+    Caption = 'Y1='
+  end
+  object Label3: TLabel
+    Left = 484
+    Height = 25
+    Top = 125
+    Width = 33
+    Caption = 'X2='
+  end
+  object Label4: TLabel
+    Left = 708
+    Height = 25
+    Top = 125
+    Width = 32
+    Caption = 'Y2='
+  end
+  object Label5: TLabel
+    Left = 484
+    Height = 25
+    Top = 181
+    Width = 33
+    Caption = 'X3='
+  end
+  object Label6: TLabel
+    Left = 708
+    Height = 25
+    Top = 189
+    Width = 32
+    Caption = 'Y3='
+  end
+  object Button1: TButton
+    Left = 568
+    Height = 64
+    Top = 245
+    Width = 248
+    Caption = 'Побудувати трикутник'
+    TabOrder = 6
+    OnClick = Button1Click
+  end
+  object Image1: TImage
+    Left = 29
+    Height = 403
+    Top = 29
+    Width = 435
+  end
+  object Button2: TButton
+    Left = 536
+    Height = 69
+    Top = 336
+    Width = 310
+    Caption = 'Розрахувати сторони трикутника'
+    Color = clHighlight
+    TabOrder = 7
+    OnClick = Button2Click
+  end
+  object Edit7: TEdit
+    Left = 149
+    Height = 33
+    Top = 464
+    Width = 133
+    TabOrder = 8
+  end
+  object Edit8: TEdit
+    Left = 437
+    Height = 33
+    Top = 464
+    Width = 133
+    TabOrder = 9
+  end
+  object Edit9: TEdit
+    Left = 732
+    Height = 33
+    Top = 468
+    Width = 128
+    TabOrder = 10
+  end
+  object Label7: TLabel
+    Left = 21
+    Height = 25
+    Top = 464
+    Width = 115
+    Caption = '1 CТОРОНА ='
+  end
+  object Label8: TLabel
+    Left = 312
+    Height = 25
+    Top = 468
+    Width = 115
+    Caption = '2 CТОРОНА ='
+  end
+  object Label9: TLabel
+    Left = 599
+    Height = 25
+    Top = 468
+    Width = 115
+    Caption = '3 CТОРОНА ='
+  end
+  object Button3: TButton
+    Left = 302
+    Height = 64
+    Top = 528
+    Width = 340
+    Caption = 'Перевірити трикутник на існування'
+    TabOrder = 11
+    OnClick = Button3Click
+  end
+  object Label10: TLabel
+    Left = 304
+    Height = 25
+    Top = 616
+    Width = 7
+    Caption = '-'
+  end
+end

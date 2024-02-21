@@ -1,71 +1,77 @@
 object Form2: TForm2
-  Left = 362
-  Height = 326
-  Top = 187
-  Width = 405
-  Caption = 'Form2'
-  ClientHeight = 326
-  ClientWidth = 405
+  Left = 382
+  Height = 209
+  Top = 368
+  Width = 541
+  Caption = '1-Evgeniy_Pelikh-IST-21-1'
+  ClientHeight = 0
+  ClientWidth = 0
+  Color = clFuchsia
   DesignTimePPI = 144
-  OnCreate = FormCreate
   LCLVersion = '3.0.0.3'
   object Edit1: TEdit
-    Left = 72
+    Left = 84
     Height = 33
-    Top = 16
-    Width = 120
+    Top = 17
+    Width = 156
     TabOrder = 0
   end
   object Edit2: TEdit
-    Left = 72
+    Left = 84
     Height = 33
-    Top = 64
-    Width = 120
+    Top = 71
+    Width = 156
     TabOrder = 1
   end
   object Edit3: TEdit
-    Left = 72
+    Left = 84
     Height = 33
-    Top = 112
-    Width = 120
+    Top = 132
+    Width = 156
     TabOrder = 2
   end
+  object Edit4: TEdit
+    Left = 368
+    Height = 33
+    Top = 25
+    Width = 144
+    TabOrder = 3
+  end
+  object Button1: TButton
+    Left = 320
+    Height = 72
+    Top = 95
+    Width = 162
+    Caption = 'Розрахувати'
+    TabOrder = 4
+    OnClick = Button1Click
+  end
   object Label1: TLabel
-    Left = 32
+    Left = 48
     Height = 25
-    Top = 24
+    Top = 17
     Width = 23
     Caption = 'X='
   end
   object Label2: TLabel
-    Left = 32
-    Height = 25
-    Top = 120
-    Width = 22
-    Caption = 'Z='
-  end
-  object Label3: TLabel
-    Left = 32
+    Left = 49
     Height = 25
     Top = 72
     Width = 22
     Caption = 'Y='
   end
-  object Button1: TButton
-    Left = 216
-    Height = 55
-    Top = 56
-    Width = 134
-    Caption = 'Solve'
-    TabOrder = 3
-    OnClick = Button1Click
+  object Label3: TLabel
+    Left = 48
+    Height = 25
+    Top = 136
+    Width = 22
+    Caption = 'Z='
   end
-  object Edit4: TEdit
-    Left = 104
-    Height = 33
-    Top = 184
-    Width = 189
-    TabOrder = 4
-    OnChange = Edit4Change
+  object Label4: TLabel
+    Left = 288
+    Height = 25
+    Top = 32
+    Width = 70
+    Caption = 'RESULT='
   end
 end

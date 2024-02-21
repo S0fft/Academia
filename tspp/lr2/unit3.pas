@@ -5,24 +5,39 @@ unit Unit3;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, ComCtrls,
-  StdCtrls, Unit1;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls, Math;
 
 type
 
   { TForm3 }
 
   TForm3 = class(TForm)
-    coImTriangle: TImage;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
     Edit1: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
-    tbX: TTrackBar;
-    tbY: TTrackBar;
-    tbSize: TTrackBar;
-    procedure coImTriangleClick(Sender: TObject);
-    procedure tbXChange(Sender: TObject);
-    procedure tbYChange(Sender: TObject);
+    Edit4: TEdit;
+    Edit5: TEdit;
+    Edit6: TEdit;
+    Edit7: TEdit;
+    Edit8: TEdit;
+    Edit9: TEdit;
+    Image1: TImage;
+    Label1: TLabel;
+    Label10: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
 
   public
@@ -31,123 +46,50 @@ type
 
 var
   Form3: TForm3;
-
+  x1, y1, x2, y2, x3, y3: integer;
+  x, y, z: double;
 implementation
-
-function TForm1.CalculateSides(x, y, size: Integer; out side1, side2, side3: Double): Boolean;
-var
-  a, b, c: Double;
-begin
-  // Расчет длин сторон треугольника
-  a := Hypot(size div 2, size);
-  b := size;
-  c := Hypot(size div 2, size);
-
-  // Проверка существования треугольника по неравенству треугольника
-  Result := (a + b > c) and (b + c > a) and (c + a > b);
-
-  // Присвоение значений переменным, если треугольник существует
-  if Result then
-  begin
-    side1 := a;
-    side2 := b;
-    side3 := c;
-  end;
-end;
-
-  procedure TForm1.UpdateSideLengths;
-  var
-    side1, side2, side3: Double;
-  begin
-    if CalculateSides(tbX.Position, tbY.Position, tbSize.Position, side1, side2, side3) then
-    begin
-      // Вывод длин сторон в Edit'ы
-      EditSide1.Text := Format('%.2f', [side1]);
-      EditSide2.Text := Format('%.2f', [side2]);
-      EditSide3.Text := Format('%.2f', [side3]);
-    end
-    else
-    begin
-      // Если треугольник не существует, очищаем Edit'ы
-      EditSide1.Text := '';
-      EditSide2.Text := '';
-      EditSide3.Text := '';
-    end;
-  end;
-
 
 {$R *.lfm}
 
 { TForm3 }
 
-procedure TForm1.coImTrianglePaint(Sender: TObject);
-var
-  x, y, size: Integer;
+procedure TForm3.Button1Click(Sender: TObject);
 begin
-  x := tbX.Position;
-  y := tbY.Position;
-  size := tbSize.Position;
+  Image1.Canvas.Rectangle (0,0, Image1.Width, Image1.Height);
+x1:= StrToInt (Edit1.Text);
+y1:= StrToInt (Edit2.Text);
+x2:= StrToInt (Edit3.Text);
+y2:= StrToInt (Edit4.Text);
+x3:= StrToInt (Edit5.Text);
+y3:= StrToInt (Edit6.Text);
 
-  DrawTriangle(x, y, size);
+Image1.Canvas.Pen.Color:= clAqua;
+Image1.Canvas.MoveTo (x1, y1);
+Image1.Canvas.Pen.Color:= $00FF00;
+Image1.Canvas.LineTo (x2, y2);
+Image1.Canvas.Pen.Color:= $FFD700;
+Image1.Canvas.LineTo (x3, y3);
+Image1.Canvas.Pen.Color:= $FF8C00;
+Image1.Canvas.LineTo (x1, y1);
 end;
 
-procedure TForm1.coImTrianglePaint(Sender: TObject);
-var
-  x, y, size: Integer;
+procedure TForm3.Button2Click(Sender: TObject);
 begin
-  x := tbX.Position;
-  y := tbY.Position;
-  size := tbSize.Position;
+  x:=sqrt(Power(x2-x1,2)+Power(y2-y1,2));
+  y:=sqrt(Power(x3-x2,2)+Power(y3-y2,2));
+  z:=sqrt(Power(x1-x3,2)+Power(y1-y3,2));
 
-  DrawTriangle(x, y, size);
+  Edit7.Text:= FloattoStr(x);
+  Edit8.Text:= FloattoStr(y);
+  Edit9.Text:= FloattoStr(z);
 end;
 
-procedure TForm3.DrawTriangle(x, y, size: Integer);
+procedure TForm3.Button3Click(Sender: TObject);
 begin
-  with coImTriangle.Canvas do
-  begin
-    // Очистка рисунка
-    Brush.Color := clWhite;
-    FillRect(0, 0, coImTriangle.Width, coImTriangle.Height);
-
-    // Рисование треугольника
-    if CalculateSides(x, y, size, Side1, Side2, Side3) then
-    begin
-      Pen.Color := clBlack;  // Черная сторона
-      Brush.Color := clBlack;
-      Polygon([Point(x, y), Point(x + size, y), Point(x + size div 2, y + size)]);
-
-      Pen.Color := clRed;    // Красная сторона
-      Brush.Color := clRed;
-      Polygon([Point(x + size, y), Point(x + size div 2, y + size), Point(x + size * 2, y + size)]);
-
-      Pen.Color := clBlue;   // Синяя сторона
-      Brush.Color := clBlue;
-      Polygon([Point(x + size div 2, y + size), Point(x + size * 2, y + size), Point(x + size, y + size * 2)]);
-    end;
-  end;
+  If (x < y + z) and (y < x + z) and (z < x + y) Then Label10.Caption := 'Трикутника з цими сторонами може існувати'
+Else Label10.Caption := 'Трикутника з цими сторонами НЕ може існувати';
 end;
-
-
-procedure TForm3.coImTriangleClick(Sender: TObject);
-begin
-
-end;
-
-procedure TForm3.tbXChange(Sender: TObject);
-begin
-  coImTriangle.Invalidate;  // Вызывает событие OnPaint для перерисовки
-end;
-
-
-procedure TForm3.tbYChange(Sender: TObject);
-begin
-  coImTriangle.Invalidate;  // Вызывает событие OnPaint для перерисовки
-end;
-
-public
-  procedure DrawTriangle(x, y, size: Integer);
-  function CalculateSides(x, y, size: Integer; out side1, side2, side3: Double): Boolean;
 
 end.
 
