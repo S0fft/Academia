@@ -1,7 +1,7 @@
 object Form3: TForm3
-  Left = 272
+  Left = 95
   Height = 438
-  Top = 303
+  Top = 347
   Width = 585
   Caption = 'Evgeniy_Pleikh'
   ClientHeight = 438
@@ -68,9 +68,9 @@ object Form3: TForm3
     Text = 'Edit2'
   end
   object Edit3: TEdit
-    Left = 304
+    Left = 392
     Height = 33
-    Top = 280
+    Top = 144
     Width = 172
     TabOrder = 5
     Text = 'Edit3'

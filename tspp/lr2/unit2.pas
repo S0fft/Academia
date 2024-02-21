@@ -5,7 +5,7 @@ unit Unit2;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Math;
 
 type
 
@@ -49,8 +49,6 @@ begin
 end;
 
 procedure TForm2.Button1Click(Sender: TObject);
-begin
-  procedure TForm2.Button1Click(Sender: TObject);
 var
   x, y, z, result: Double;
 begin
@@ -64,8 +62,6 @@ begin
 
   // Вывод результата
   Edit4.Text := FloatToStr(result);
-end;
-
 end;
 
 end.

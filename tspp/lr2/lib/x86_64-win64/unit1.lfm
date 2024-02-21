@@ -1,0 +1,46 @@
+object Form1: TForm1
+  Left = 140
+  Height = 406
+  Top = 208
+  Width = 509
+  Caption = 'Evgeniy_Pelikh'
+  ClientHeight = 406
+  ClientWidth = 509
+  Color = cl3DDkShadow
+  DesignTimePPI = 144
+  OnCreate = FormCreate
+  LCLVersion = '3.0.0.3'
+  object Button1: TButton
+    Left = 8
+    Height = 30
+    Top = 8
+    Width = 106
+    Caption = '1 Task'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 126
+    Height = 30
+    Top = 8
+    Width = 106
+    Caption = 'Button2'
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 248
+    Height = 30
+    Top = 8
+    Width = 106
+    Caption = 'Button3'
+    TabOrder = 2
+  end
+  object Button4: TButton
+    Left = 360
+    Height = 30
+    Top = 8
+    Width = 106
+    Caption = 'Button4'
+    TabOrder = 3
+  end
+end
