@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899/12/30 00:00:00.000.691,=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.874,=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.897,C:\Users\Polzovatel\Desktop\Лабы по ТСПП\Завдання 1 лабы\Задание 4\Делфи\Unit2.pas=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.387,=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.949,C:\Users\Polzovatel\Desktop\Лабы по ТСПП\Завдання 1 лабы\Задание 4\Делфи\Unit3.pas=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.164,=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.745,C:\Users\Polzovatel\Desktop\Лабы по ТСПП\Завдання 1 лабы\Задание 4\Делфи\Project1.dproj=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.949,C:\Users\Polzovatel\Desktop\Лабы по ТСПП\Завдання 1 лабы\Задание 4\Делфи\Unit3.dfm=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.897,C:\Users\Polzovatel\Desktop\Лабы по ТСПП\Завдання 1 лабы\Задание 4\Делфи\Unit2.dfm=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.180,C:\Users\Polzovatel\Desktop\Лабы по ТСПП\Завдання 1 лабы\Задание 4\Делфи\Unit1.dfm=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.180,C:\Users\Polzovatel\Desktop\Лабы по ТСПП\Завдання 1 лабы\Задание 4\Делфи\Unit1.pas=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Unit1.pas"/>
+    <File Path="Unit1.dfm"/>
+    <File Path="Unit2.pas"/>
+    <File Path="Unit2.dfm"/>
+    <File Path="Unit3.pas"/>
+    <File Path="Unit3.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

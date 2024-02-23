@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899/12/30 00:00:00.000.358,C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Polzovatel\Desktop\Лабы по ТСПП\Завдання 1 лабы\Задание 1\С++\Unit1.dfm</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.836,=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.399,=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.358,C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\Polzovatel\Desktop\Лабы по ТСПП\Завдання 1 лабы\Задание 1\С++\Unit1.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.358,C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\Polzovatel\Desktop\Лабы по ТСПП\Завдання 1 лабы\Задание 1\С++\Unit1.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.543,C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\Polzovatel\Desktop\Лабы по ТСПП\Завдання 1 лабы\Задание 1\С++\Project1.cbproj</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.025,=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.713,=C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.912,C:\Users\Polzovatel\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\Polzovatel\Desktop\Лабы по ТСПП\Завдання 1 лабы\Задание 1\С++\Project1PCH1.h</Transaction>
+  </Transactions>
+</BorlandProject>
