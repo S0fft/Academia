@@ -1,0 +1,18 @@
+/* Стили для шапки */
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Стили для основного контента */
+main {
+    padding: 20px;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center;
+}
