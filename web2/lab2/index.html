@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математические вычисления</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Математические вычисления</h1>
+    </header>
+    <main>
+        <!-- Форма для ввода данных -->
+        <form id="calcForm">
+            <label for="start">Начальное значение:</label>
+            <input type="number" id="start" name="start" required>
+            <label for="end">Конечное значение:</label>
+            <input type="number" id="end" name="end" required>
+            <label for="step">Шаг:</label>
+            <input type="number" id="step" name="step" required>
+            <button type="submit">Рассчитать</button>
+        </form>
+        <!-- Результаты вычислений -->
+        <div id="results"></div>
+    </main>
+    <footer>
+        <p id="greeting"></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
