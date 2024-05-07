@@ -28,7 +28,7 @@ if __name__ == "__main__":
     schedule_system.add_course("Основи охорони праці", prerequisites=["Тайм-менеджмент", "Теорія інформації"])
 
     schedule = schedule_system.generate_schedule()
-    print("Расписание занятий:")
+    print("Розклад занять:")
     for index, course in enumerate(schedule, start=1):
         print(f"{index}. {course}")
 
