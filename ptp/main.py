@@ -29,11 +29,12 @@ def color_schedule(graph):
 
 if __name__ == "__main__":
     courses = [
-        Course("Math", "Dr. Smith", "Room 101", {"Alice", "Bob"}),
-        Course("Physics", "Dr. Brown", "Room 102", {"Bob", "Charlie"}),
-        Course("Chemistry", "Dr. Smith", "Room 101", {"Charlie", "Alice"}),
-        Course("Biology", "Dr. White", "Room 103", {"Alice"}),
-        Course("English", "Dr. Green", "Room 104", {"Bob", "Charlie"})
+        Course("Аналіз даних та знань", "Гудкова К.Ю.", "Room 2428", {"", ""}),
+        Course("WEB-технології та WEB-дізайн-2", "Нечволода Л.В.", "Room 2428", {"", ""}),
+        Course("Теорія інформації", "Беш А.М.", "Room 2428", {"", ""}),
+        Course("Іноземна мова", "Ковальова Н.І.", "Room 2428", {""}),
+        Course("Випадкові процеси", "Гітіс В.Б.", "Room 2428", {"", ""}),
+        Course("Проектно-технологічна практика", "Гудкова К.Ю.", "Room 2428", {"", ""}),
     ]
 
     conflict_graph = create_conflict_graph(courses)
@@ -46,10 +47,3 @@ if __name__ == "__main__":
     pos = nx.spring_layout(conflict_graph)
     nx.draw(conflict_graph, pos, with_labels=True, node_color=list(schedule.values()), cmap=plt.cm.tab20)
     plt.show()
-
-
-# ("Аналіз даних та знань")
-# ("WEB-технології та WEB-дізайн-2", prerequisites=["Аналіз даних та знань"])
-# ("Теорія інформації", prerequisites=["Аналіз даних та знань"])
-# ("Іноземна мова", prerequisites=["Теорія інформації", "Аналіз даних та знань"])
-# ("Основи охорони праці", prerequisites=["Тайм-менеджмент", "Теорія інформації"])
