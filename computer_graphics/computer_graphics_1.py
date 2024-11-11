@@ -1,6 +1,5 @@
-import turtle
 import math
-
+import turtle
 
 window = turtle.Screen()
 window.title("computer_graphics_1 - DSEA")
@@ -10,7 +9,7 @@ turtle.speed(2)
 
 def make_triangle(side, forward_length):
     turtle.forward(forward_length)
-    side(120) 
+    side(120)
     turtle.forward(forward_length)
     side(120)
     turtle.forward(forward_length)

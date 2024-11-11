@@ -1,6 +1,5 @@
-from random import randint as random
 import time
-
+from random import randint as random
 
 password_txt = open(r"passwords_file.txt", "a")
 
