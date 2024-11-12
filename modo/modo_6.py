@@ -1,6 +1,6 @@
+import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import minimize
-import matplotlib.pyplot as plt
 
 a = 6
 b = 27
