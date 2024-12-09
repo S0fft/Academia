@@ -1,10 +1,13 @@
 import random
 
+
 def activation_function(x):
     return 1 if x >= 0 else 0
 
+
 def custom_function(x1, x2):
     return 1 if (not x1 and not x2) else 0
+
 
 def train_perceptron(inputs, outputs, weights, bias, learning_rate, epochs):
     num_samples = len(inputs)
@@ -32,6 +35,7 @@ def train_perceptron(inputs, outputs, weights, bias, learning_rate, epochs):
             break
 
     return bias
+
 
 def main():
     random.seed()
@@ -64,6 +68,7 @@ def main():
             weighted_sum += weights[j] * input_vector[j]
         prediction = activation_function(weighted_sum)
         print(f"Input: {input_vector} -> Prediction: {prediction}")
+
 
 if __name__ == "__main__":
     main()
