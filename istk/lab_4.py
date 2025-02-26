@@ -8,14 +8,12 @@ K3 = 1
 T1 = 0.002
 T2 = 0.4
 
-K = K1 + K3
-
-num = [K * K2]
-den = [T1 * T2, (T1 + T2), 1]
+num = [K1 + K2]
+den = [T1 * T2, T1 + T2, 1, (K1 + K2) * K3]
 
 system = signal.TransferFunction(num, den)
 
-time = np.linspace(0, 20, 10000)
+time = np.linspace(0, 5, 100)
 t, y = signal.step(system, T=time)
 
 first_peak_time = t[np.argmax(y)]
@@ -52,14 +50,18 @@ resonance_frequency = frequency
 integral_square_error = np.trapz((y - 1) ** 2, t)
 
 print(f'1. Час досягнення першого максимуму: {first_peak_time:.4f} с')
-print(f'2. Частота коливань: {frequency:.4f} Гц')
-print(f'3. Час наростання перехідного процесу: {rise_time:.4f} с')
+print(f'2. Частота коливань: {frequency if not np.isnan(frequency) else "Немає коливань"} Гц')
+
+print(f'3. Час нарастання перехідного процесу: {rise_time:.4f} с')
 print(f'4. Перерегулювання: {overshoot:.2f} %')
-print(f'5. Час регулювання: {settling_time:.4f} с')
+
+print(f'5. Час регулювання: {settling_time if not np.isnan(settling_time) else "Не знайдено"} с')
 print(f'6. Декремент затухання: {damping_decrement if damping_decrement is not None else "Невизначено"}')
+
 print(f'7. Установившася помилка: {steady_state_error:.4f}')
 print(f'8. Коефіцієнт статизму: {static_gain:.4f}')
-print(f'9. Резонансна частота: {resonance_frequency:.4f} Гц')
+
+print(f'9. Резонансна частота: {resonance_frequency if not np.isnan(resonance_frequency) else "Немає коливань"} Гц')
 print(f'10. Квадратична інтегральна оцінка: {integral_square_error:.4f}')
 
 plt.figure(figsize=(8, 6))
