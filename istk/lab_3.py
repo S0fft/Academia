@@ -8,24 +8,28 @@ K3 = 1
 T1 = 0.002
 T2 = 0.4
 
-K = K1 + K3
-
-num = [K * K2]
-den = [T1 * T2, (T1 + T2), 1]
+num = [K1 + K2]
+den = [T1 * T2, (T1 + T2), 1, -K3 * (K1 + K2)]
 
 system = signal.TransferFunction(num, den)
 
 hurwitz_matrix = np.array([
-    [den[1], den[2], 0],
+    [den[1], den[2], den[3]],
     [den[0], den[1], 0],
     [0, den[0], den[2]]
 ])
+
 det1 = hurwitz_matrix[0, 0]
 det2 = np.linalg.det(hurwitz_matrix[:2, :2])
 det3 = np.linalg.det(hurwitz_matrix)
 
 stable_hurwitz = det1 > 0 and det2 > 0 and det3 > 0
 print(f'Критерій Гурвіца: дет1 = {det1:.3f}, дет2 = {det2:.3f}, дет3 = {det3:.3f} -> Система стійка: {stable_hurwitz}')
+
+if stable_hurwitz:
+    print("Система стійка за критерієм Гурвіца")
+else:
+    print("Система не стійка за критерієм Гурвіца")
 
 
 def routh_array(coeffs):
@@ -48,6 +52,12 @@ routh_str = ", ".join([f"{r:.3f}" for r in routh[:, 0]])
 stable_routh = np.all(routh[:, 0] > 0)
 print(f'Критерій Рауса: {routh_str} -> Система стійка: {stable_routh}')
 
+
+if stable_routh:
+    print("Система стійка за критерієм Рауса")
+else:
+    print("Система не стійка за критерієм Рауса")
+
 w = np.linspace(0, 10, 500)
 real_part = sum([den[i] * (1j * w) ** (len(den) - 1 - i) for i in range(len(den))]).real
 imag_part = sum([den[i] * (1j * w) ** (len(den) - 1 - i) for i in range(len(den))]).imag
@@ -63,6 +73,11 @@ plt.title('Критерій Михайлова')
 plt.grid()
 plt.show()
 
+if np.all(real_part >= 0):
+    print("Система стійка за критерієм Михайлова")
+else:
+    print("Система не стійка за критерієм Михайлова")
+
 w, h = signal.freqresp(system)
 plt.figure(figsize=(6, 6))
 plt.plot(h.real, h.imag, label='Діаграма Найквіста')
@@ -73,3 +88,8 @@ plt.legend()
 plt.title('Критерій Найквіста')
 plt.grid()
 plt.show()
+
+if np.all(h.real >= 0):
+    print("Система стійка за критерієм Найквіста")
+else:
+    print("Система не стійка за критерієм Найквіста")
