@@ -8,13 +8,9 @@ K3 = 1
 T1 = 0.002
 T2 = 0.4
 
-W1 = signal.TransferFunction([K1], [T1, 1])
-W2 = signal.TransferFunction([K2], [1])
-W3 = signal.TransferFunction([K3], [T2, 1])
-
-num = np.polymul(W1.num, W2.num)
-den = np.polyadd(np.polymul(W1.den, W2.den), np.polymul(W1.num, W2.num * W3.num))
-system = signal.TransferFunction(num, den)
+numerator = [K1 + K2]
+denominator = [T1 * T2, (T1 + T2), 1, (K1 + K2) * (-K3)]
+system = signal.TransferFunction(numerator, denominator)
 
 
 def hurwitz_criterion(coeffs):
@@ -29,17 +25,10 @@ def hurwitz_criterion(coeffs):
     return det_values
 
 
-hurwitz_dets = hurwitz_criterion(den)
-
-
-if len(hurwitz_dets) >= 3:
-    det1, det2, det3 = hurwitz_dets[0], hurwitz_dets[1], hurwitz_dets[2]
-else:
-    det1, det2, det3 = hurwitz_dets[0], hurwitz_dets[1], 0
-
+hurwitz_dets = hurwitz_criterion(denominator)
 stable_hurwitz = all(d > 0 for d in hurwitz_dets)
 
-print(f'Гурвіц: Δ1 = {det1:.4f}, Δ2 = {det2:.4f}, Δ3 = {det3:.4f} Стійкість: {stable_hurwitz}')
+print(f'Критерій Гурвіца: {hurwitz_dets} -> Система стійка: {stable_hurwitz}')
 
 
 def routh_criterion(coeffs):
@@ -62,11 +51,11 @@ def routh_criterion(coeffs):
     return np.all(R[:, 0] > 0), R[:, 0]
 
 
-stable_routh, routh_first_column = routh_criterion(den)
+stable_routh, routh_first_column = routh_criterion(denominator)
 print(f'Критерій Рауса: {routh_first_column} -> Система стійка: {stable_routh}')
 
 w = np.linspace(0, 10, 500)
-char_poly_values = sum([den[i] * (1j * w) ** (len(den) - 1 - i) for i in range(len(den))])
+char_poly_values = sum([denominator[i] * (1j * w) ** (len(denominator) - 1 - i) for i in range(len(denominator))])
 real_part = char_poly_values.real
 imag_part = char_poly_values.imag
 
