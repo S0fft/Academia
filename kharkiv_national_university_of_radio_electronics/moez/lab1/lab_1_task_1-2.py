@@ -9,7 +9,7 @@ try:
     des_cipher = DES.new(des_key, DES.MODE_ECB)
     BLOCK_SIZE_DES = 8
 
-    text_des = b'Example text to encrypt'
+    text_des = b'Test Text / Moez Lab 1'
 
     padded_text_des = pad(text_des, BLOCK_SIZE_DES)
 
@@ -34,7 +34,7 @@ try:
     aes_cipher = AES.new(aes_key, AES.MODE_ECB)
 
     BLOCK_SIZE_AES = 16
-    text_aes = b'Example text for AES encryption'
+    text_aes = b'Test Text / Moez Lab 1'
 
     padded_text_aes = pad(text_aes, BLOCK_SIZE_AES)
 
